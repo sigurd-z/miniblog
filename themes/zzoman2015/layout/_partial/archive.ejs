@@ -5,7 +5,7 @@
 <% } else { %>
 
     <% var last; %>
-    <div class="global-width">
+    <div class="global-fullwidth">
         <section class="archives">
             <% page.posts.each(function(post, i){ %>
                 <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
