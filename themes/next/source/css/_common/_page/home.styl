@@ -1,0 +1,207 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.posts-waterfull {
+  padding: 0 0 0 20px;
+}
+
+@media (max-width: 767px) {
+  .posts-waterfull {
+    margin: 0 20px;
+  }
+
+  .post-body {
+    pre, .highlight {
+      margin: 0 -20px;
+      padding: 10px 20px;
+      .gutter pre {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.posts-waterfull .post-header {
+    padding: 10px;
+}
+
+.posts-waterfull .post-title-link {
+  &:hover .post-title::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+}
+
+.posts-waterfull .post-title {
+  text-align: left;
+  word-break: break-word;
+  margin: 0;
+  font-size: 18px;
+
+  display: inline-block;
+  position: relative;
+  color: $whitesmoke;
+  border-bottom: none;
+  line-height: 1.2;
+  vertical-align: top;
+  background-color: rgba(30,30,30,0.5);
+
+  .fa { font-size: 16px; }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #EEE;
+    visibility: hidden;
+    transform: scaleX(0);
+    the-transition();
+  }
+}
+
+.posts-waterfull .post {
+  width: 266px;
+  height: 200px;
+  margin: 0 0 20px 20px;
+  float: left;
+}
+
+.posts-waterfull .post-meta {
+  margin: 3px 0 60px 0;
+  color: $grey-dark;
+  font-size: 12px;
+  text-align: center;
+
+  .post-category-list {
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+  }
+  .post-category-list-link {
+    color: $grey-dark;
+  }
+}
+
+.posts-waterfull .post-comments-count {
+  +mobile() { display: none; }
+}
+
+.posts-waterfull .post-body {
+  +desktop() { text-align: justify; }
+
+
+  h2, h3, h4, h5, h6 {
+    padding-top: 10px;
+  }
+
+  img {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 3px;
+    border: 1px solid $gray-lighter;
+  }
+}
+
+.posts-waterfull .post-tags {
+  margin-top: 40px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
+  }
+}
+
+.post-nav {
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 10px;
+  white-space: nowrap;
+  border-top: 1px solid $gainsboro;
+}
+
+.post-nav-item {
+  display: inline-block;
+  width: 50%;
+  white-space: normal;
+
+  a {
+    position: relative;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 14px;
+    color: $black-light;
+    border-bottom: none;
+
+    &:hover {
+      color: $black-deep;
+      border-bottom: none;
+    }
+
+    &:active {
+      top: 2px;
+    }
+
+    i { font-size: 12px; }
+  }
+
+}
+
+.post-nav-next {}
+
+.post-nav-prev { text-align: right; }
+
+.posts-waterfull {
+  .post-eof {
+    display: block;
+    margin: $post-eof-margin-top auto $post-eof-margin-bottom;
+    width: 8%;
+    height: 1px;
+    background: $grey-light;
+    text-align: center;
+  }
+}
+
+.post-more-link { margin-top: 50px; }
+
+.posts-waterfull .post-body .fancybox img { margin: 0 auto; }
+
+.posts-linear .post {
+  margin: -40px 0;
+
+  height: 100px;
+
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
+
+  &:hover {
+    height: 300px;
+  }
+}
+
+.posts-linear .post-title {
+  margin: 0 0 0 10px;
+}
+
+.posts-linear .post-title span {
+  color: $whitesmoke;
+  background-color: rgba(30,30,30,0.5);
+}
+
+.posts-linear .post-meta {
+    left: auto;
+    right: 5px;
+    color: $whitesmoke;
+    background-color: rgba(30,30,30,0.5);
+}

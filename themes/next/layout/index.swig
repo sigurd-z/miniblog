@@ -1,5 +1,5 @@
 {% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
+{% import '_macro/post-block.swig' as post_template %}
 {% import '_macro/sidebar.swig' as sidebar_template %}
 
 {% block title %} {{ config.title }} {% endblock %}
@@ -9,7 +9,11 @@
 {% endblock %}
 
 {% block content %}
-  <section id="posts" class="posts-expand">
+  <style>
+    .main-inner {width: 100%!important;}
+  </style>
+
+  <section id="posts" class="posts-waterfull clearfix">
 
     {% set posts_normal = page.posts %}
 
