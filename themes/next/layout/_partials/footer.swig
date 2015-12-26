@@ -1,3 +1,7 @@
+{% for widget in theme.widgets %}
+  {% set widgetn = 'widget/' + widget + '.swig' %}
+  {% include widgetn %}
+{% endfor %}
 <div class="copyright" >
   {% set current = date(Date.now(), "YYYY") %}
   &copy; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}

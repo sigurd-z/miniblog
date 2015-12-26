@@ -232,3 +232,33 @@
   margin: 0 0 10px 10px;
   float: left;
 }
+
+.footer .widget-wrap:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.main {
+  padding-bottom: 0;
+}
+
+.footer {
+  position: relative;
+
+  .category-list-item,.tag-list-item {
+    float: left;
+    margin-left: 30px;
+  }
+
+  .category-list-item .category-list-count,.tag-list-item .tag-list-count {
+    margin-left: 5px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+  }
+}

@@ -76,6 +76,11 @@ sidebar: post
 #sidebar: hide
 #sidebar: remove
 
+# Widget
+# Widget List : category, tag, archive, recent_posts
+widgets:
+- category
+- tag
 
 # Social links
 # social:
