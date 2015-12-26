@@ -8,13 +8,10 @@
 }
 
 .posts-waterfull {
-  padding: 0 0 0 20px;
+  margin: 0 20px;
 }
 
 @media (max-width: 767px) {
-  .posts-waterfull {
-    margin: 0 20px;
-  }
 
   .post-body {
     pre, .highlight {
@@ -29,6 +26,8 @@
 
 .posts-waterfull .post-header {
     padding: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 .posts-waterfull .post-title-link {
@@ -204,4 +203,32 @@
     right: 5px;
     color: $whitesmoke;
     background-color: rgba(30,30,30,0.5);
+}
+
+.page-waterfull {
+  margin: 0 30px;
+  clearfix;
+}
+
+@media (max-width: 767px) {
+  .page-waterfull {
+    margin: 0 20px;
+  }
+
+  .post-body {
+    pre, .highlight {
+      margin: 0 -20px;
+      padding: 10px 20px;
+      .gutter pre {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.page-waterfull .post {
+  width: 256px;
+  height: 256px;
+  margin: 0 0 10px 10px;
+  float: left;
 }
