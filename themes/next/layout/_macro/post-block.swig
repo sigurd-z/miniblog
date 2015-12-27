@@ -7,7 +7,7 @@
   {% endif %}
 
   <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
-    <article class="post post-type-{{ post.type | default('normal') }}" itemscope itemtype="http://schema.org/Article" {% if post.photos.length>0 %}style="background:url('{{ post.photos[0] }}') 50% 0px / {{ stretch_direction }} no-repeat;"{% endif %} >
+    <article class="post post-type-{{ post.type | default('normal') }}" itemscope itemtype="http://schema.org/Article" {% if post.thumbnail %}style="background:url('{{ post.thumbnail }}') 50% 0px / {{ stretch_direction }} no-repeat;"{% endif %} >
         <header class="post-header">
           <h1 class="post-title">
               <span itemprop="name">{{ post.title | default(__('post.untitled')) }}</span>
